@@ -2,7 +2,7 @@
 Some musings about hiding methods and ARC idiosyncrasies
 File this under Delphi Compiler Red Herrings. I didn't start out to try to  understand this, but that's the way it worked out. Obviously, I had bugs. Not so obviously, it took me a long time to understand why.
 
-There's a blog post about this that you can read at [When I get it posted, the link will be  here]
+There's a blog post about this that you can read at [Delphi Red Herrings: Hidden Virtual Methods](https://delphichops.blogspot.com/2021/07/arc-in-delphi.html "Delphi Red Herrings").
 
 ## Thesis
 
