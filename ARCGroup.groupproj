@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{133CFD59-877D-4874-B69F-9E1EC73D263C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ARCProject.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ARCProject">
+        <MSBuild Projects="ARCProject.dproj"/>
+    </Target>
+    <Target Name="ARCProject:Clean">
+        <MSBuild Projects="ARCProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ARCProject:Make">
+        <MSBuild Projects="ARCProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ARCProject"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ARCProject:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ARCProject:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
