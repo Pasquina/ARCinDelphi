@@ -29,7 +29,7 @@ type
     property MyList: TList<Integer> read FMyList write SetMyList;
   public
     constructor Create; override;
-    destructor Destroy; override;
+    destructor Destroy;
   end;
 
   TBaseClassClass = class of TBaseObject;

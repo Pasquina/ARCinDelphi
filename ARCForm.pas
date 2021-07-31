@@ -9,7 +9,9 @@ uses
 type
   TForm1 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +40,17 @@ begin
   LChildClass := TChildObject;
   LChildObject := LChildClass.Create;
 
+  ShowMessage('Exiting Scope');
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  LChildObject: TChildObject;
+begin
+  ShowMessage('Create Child Object');
+  LChildObject := TChildObject.Create;
+  ShowMessage('Free Child Object');
+  LChildObject.Free;
   ShowMessage('Exiting Scope');
 end;
 
